@@ -16,13 +16,12 @@ services:
     environment:
       - HOSTNAME=sxldaps.mooo.com
       - LOG_LEVEL=256
-      - DOMAIN=example.org
+      - DOMAIN=stevexu.net
       - BASE_DN=dc=example,dc=org
-      - ADMIN_PASS=admin
-      - CONFIG_PASS=config
+      - ADMIN_PASS=admin1
+      - CONFIG_PASS=config1
       - DEBUG_MODE=TRUE
-      - SCHEMA_TYPE=nis
-      - ORGANIZATION=Example Organization
+      - ORGANIZATION=Steve Xu
 
       - ENABLE_READONLY_USER=FALSE
       - READONLY_USER_USER=reader
@@ -40,7 +39,7 @@ services:
       - TLS_CA_CRT_PATH=/certs/mongodb-test-ca
       - TLS_KEY_PATH=/certs/mongodb-test-ca
       - TLS_CRT_PATH=/certs/mongodb-test-ca
-      - TLS_ENFORCE=TRUE
+      - TLS_ENFORCE=FALSE
       - TLS_CIPHER_SUITE=ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA
       - TLS_VERIFY_CLIENT=never
       - SSL_HELPER_PREFIX=ldap
@@ -51,13 +50,13 @@ services:
       - REPLICATION_HOSTS=ldap://ldap1.example.com ldap://ldap2.example.com ldap://ldap3.example.com
       - REMOVE_CONFIG_AFTER_SETUP=false
 
-      - ENABLE_BACKUP=TRUE
+      - ENABLE_BACKUP=FALSE
       - BACKUP_INTERVAL=0400
       - BACKUP_RETENTION=10080
 
       - ENABLE_ZABBIX=TRUE
       - ZABBIX_HOSTNAME=openldap-app
-
+      - ENABLE_PPOLICY=FALSE
 
     networks:
       - internal
