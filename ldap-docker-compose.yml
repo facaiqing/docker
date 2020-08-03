@@ -29,7 +29,7 @@ services:
 
       - ENABLE_TLS=TRUE
       - TLS_CREATE_CA=FALSE
-      - TLS_CA_SUBJECT=/C=US/ST=CA/L=San Francisco/O=MongoDB Inc/OU=Root/CN=RootCA
+      - TLS_CA_SUBJECT=/C=US/ST=CA/L=San Francisco/O=MongoDB Inc/OU=Root/CN=
       - TLS_CA_CRT_SUBJECT=/C=US/ST=CA/L=San Francisco/O=MongoDB Inc/OU=Root/CN=RootCA
       - TLS_DH_PARAM_FILENAME=dhparam.pem
       - TLS_CA_CRT_FILENAME=mongodb-test-ca.crt
