@@ -18,8 +18,8 @@ services:
       - LOG_LEVEL=256
       - DOMAIN=stevexu.org
       - BASE_DN=dc=stevexu,dc=org
-      - ADMIN_PASS=admin123
-      - CONFIG_PASS=config123
+      - ADMIN_PASS=<admin_pass>
+      - CONFIG_PASS=<config_pass>
       - DEBUG_MODE=TRUE
       - ORGANIZATION=Steve Xu Organization
 
@@ -28,7 +28,7 @@ services:
       - READONLY_USER_PASS=reader
 
       - ENABLE_TLS=TRUE
-      - TLS_CA_NAME=mongoca
+      - TLS_CA_NAME=<CA_name>
       - TLS_ENFORCE=TRUE
       - TLS_CIPHER_SUITE=ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:-DHE-DSS:-RSA:!aNULL:!MD5:!DSS:!SHA
       - TLS_VERIFY_CLIENT=never
